@@ -17,9 +17,7 @@ function Login() {
   useEffect(() => {
     // redirect to home if already logged in
     if (authUser) history.navigate("/");
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [authUser]);
 
   // form validation rules
   const validationSchema = Yup.object().shape({
